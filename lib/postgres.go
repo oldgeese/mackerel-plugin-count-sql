@@ -54,7 +54,7 @@ func fetchCount(db *sqlx.DB) (map[string]interface{}, error) {
 }
 
 func fetchSum(db *sqlx.DB) (map[string]interface{}, error) {
-	query := `select sum("column2") from sample`
+	query := `select sum(column2) from sample`
 
 	rows, err := db.Query(query)
 	if err != nil {
